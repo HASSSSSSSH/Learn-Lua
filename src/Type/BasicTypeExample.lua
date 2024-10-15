@@ -60,13 +60,22 @@ BasicTypeExample = {
     --
     --
 
-    -- TODO: thread 类型
-    --
-    --
+    --- thread 类型
+    function()
+        print("Example 6:")
+        local thread1 = coroutine.running()
+        local thread2 = coroutine.create(
+                function()
+                    print("Test")
+                end
+        )
+        printType(thread1)
+        printType(thread2)
+    end,
 
     --- table 类型
     function()
-        print("Example 6:")
+        print("Example 7:")
         local a = {
             name = "Test",
             x = 1,
