@@ -83,10 +83,11 @@ FunctionExample = {
         end
 
         function t:toString()
-            return self.getTag(self)
+            return self:getTag()
         end
 
         print(t.toString(t))
+        print(t:toString())
     end
 }
 

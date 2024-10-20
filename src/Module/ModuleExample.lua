@@ -61,6 +61,19 @@ ModuleExample = {
         cppLib.printParams(0, 1, "Test")
         print(cppLib.pow(2, 8))
     end,
+
+    --- 使用 C 库中的类型
+    function()
+        print("Example 4:")
+
+        -- 在 package.cpath 中添加 C 库的查找路径
+        package.cpath = "../../lib/?.dll;" .. package.cpath
+
+        local Point = require("point")
+        local p1 = Point.new(1, 100)
+        print(type(p1), p1)
+        print("p1 = (" .. p1:getX() .. ", " .. p1:getY() .. ")")
+    end,
 }
 
 --- 运行

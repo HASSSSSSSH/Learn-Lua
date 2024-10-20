@@ -56,13 +56,18 @@ BasicTypeExample = {
         printType(b)
     end,
 
-    -- TODO: userdata 类型
-    --
-    --
+    --- userdata 类型
+    function()
+        print("Example 6:")
+        package.cpath = "../../lib/?.dll;" .. package.cpath
+        local Point = require("point")
+        local p1 = Point.new(1, 100)
+        printType(p1)
+    end,
 
     --- thread 类型
     function()
-        print("Example 6:")
+        print("Example 7:")
         local thread1 = coroutine.running()
         local thread2 = coroutine.create(
                 function()
@@ -75,7 +80,7 @@ BasicTypeExample = {
 
     --- table 类型
     function()
-        print("Example 7:")
+        print("Example 8:")
         local a = {
             name = "Test",
             x = 1,
