@@ -15,6 +15,7 @@ ModuleExample = {
         local v1, v2 = require("Utils")
         print(v1, v2)
 
+        print(Utils)
         print(Utils.Constants.Pi)
         print(Utils.getDirectory())
 

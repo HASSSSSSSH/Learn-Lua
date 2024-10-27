@@ -10,6 +10,9 @@ ExpressionExample = {
         local t1 = { "Test" }
         local t2 = { "Test" }
         local t3 = t1
+        local f1 = function() end
+        local f2 = function() end
+        local f3 = f1
 
         -- 运算符 == 首先比较操作数的类型
         print("(a == t1)", a == t1)
@@ -20,16 +23,45 @@ ExpressionExample = {
         -- 对于 string 类型, 当两者具有相同字节内容时相等
         print("(t1[1] == t2[1])", t1[1] == t2[1])
 
-        -- 对于 table, userdata, thread 类型, 比较的是引用
+        -- 对于 table, userdata, thread, function 类型, 比较的是引用
         print("(t1 == t2)", t1 == t2)
         print("(t1 == t3)", t1 == t3)
+        print("(f1 == f2)", f1 == f2)
+        print("(f1 == f3)", f1 == f3)
 
         print("(\"1\" ~= 1)", "1" ~= 1)
     end,
 
-    --- 取长度运算符 #
+    --- 逻辑运算符
     function()
         print("Example 2:")
+
+        local a = nil
+        local b = false
+        local c = 0
+
+        -- 对于 and 运算符, 如果第一个参数值为 false 或者 nil, 返回第一个参数
+        -- 否则返回第二个参数
+        print(a and b)
+        print(b and a)
+        print(c and -1)
+
+        -- 对于 or 运算符, 如果第一个参数值不为 false 或者 nil, 返回第一个参数
+        -- 否则返回第二个参数
+        print(a or b)
+        print(b or a)
+        print(c or -1)
+
+        -- not 运算符始终返回 true 或者 false
+        -- 将 false 和 nil 视为 false, 将其他任何值视为 true
+        print(not a)
+        print(not b)
+        print(not c)
+    end,
+
+    --- 取长度运算符 #
+    function()
+        print("Example 3:")
 
         -- 字符串的长度是其字节的数量
         -- 当每个字符都是一个字节时, 得到的长度是字符串的实际长度
@@ -68,7 +100,7 @@ ExpressionExample = {
 
     --- 多重表达式
     function()
-        print("Example 3:")
+        print("Example 4:")
 
         local function f()
             return 1, 2, 3

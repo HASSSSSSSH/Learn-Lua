@@ -30,9 +30,30 @@ StatementExample = {
         print("a =", a, "b =", b, "c =", c)
     end,
 
-    --- for 语句
+    --- if 语句
     function()
         print("Example 2:")
+
+        local f = function(a)
+            if (a) then
+                return true
+            else
+                return false
+            end
+        end
+
+        -- 在 Lua 中, 只有 false 和 nil 视为假
+        print(f(nil))
+        print(f(false))
+        print(f(0))
+        print(f(-1))
+        print(f(""))
+        print(f({}))
+    end,
+
+    --- for 语句
+    function()
+        print("Example 3:")
 
         -- 步长默认为 1
         for i = 1, 5 do
@@ -59,7 +80,7 @@ StatementExample = {
 
     --- break 语句
     function()
-        print("Example 3:")
+        print("Example 4:")
 
         -- 初始化一个二维数组
         local array = {}
@@ -90,7 +111,7 @@ StatementExample = {
 
     --- return 语句
     function()
-        print("Example 4:")
+        print("Example 5:")
 
         -- 遍历数组, 找到等于 target 的元素
         local t = {}
