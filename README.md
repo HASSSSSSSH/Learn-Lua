@@ -93,7 +93,7 @@ string	table: 0000000000f28ff0
   - **ErrorHandling**
     - **ErrorHandlingExample.lua**：关于 Lua 错误处理的示例。示例包括：通过 error 引发错误、使用 pcall 捕获 Lua 中的错误等。
   - **Expression**
-    - **ExpressionExample.lua**：关于 Lua 表达式的示例。示例包括：关系运算符、取长度运算符、多重表达式等。
+    - **ExpressionExample.lua**：关于 Lua 表达式的示例。示例包括：关系运算符、逻辑运算符、取长度运算符、多重表达式等。
   - **GC**
     - **GarbageCollectionExample.lua**：关于 Lua 垃圾回收的示例。示例包括：使用 collectgarbage 函数。
   - **Iterator**
@@ -103,9 +103,9 @@ string	table: 0000000000f28ff0
   - **Module**
     - **ModuleExample.lua**：关于 Lua 模块的示例。示例包括：使用 require 查找 Lua 库、使用 require 查找 C 库、使用 package.loadlib 函数将 C 库动态链接到程序 、使用 C 库中的类型等。
   - **ObjectOriented**
-    - **ObjectOrientedExample.lua**：关于 Lua 模拟面向对象的示例。示例包括：模拟类和对象。
+    - **ObjectOrientedExample.lua**：关于 Lua 模拟面向对象的示例。示例包括：模拟类和对象、模拟类的构造函数、模拟继承等。
   - **Statement**
-    - **StatementExample.lua**：关于 Lua 语句的示例。示例包括：赋值操作、for 语句、break 语句、return 语句等。
+    - **StatementExample.lua**：关于 Lua 语句的示例。示例包括：赋值操作、if 语句、for 语句、break 语句、return 语句等。
   - **Type**
     - **BasicTypeExample.lua**：关于 Lua 基本类型的示例。示例包括：nil 类型、boolean 类型、number 类型、string 类型、function 类型、userdata 类型、thread 类型、table 类型。
     - **FunctionExample.lua**：关于 Lua 函数的示例。示例包括：函数的定义和调用、模拟方法等。
